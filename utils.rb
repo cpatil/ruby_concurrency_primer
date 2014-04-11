@@ -75,7 +75,7 @@ module Utils
         else
           # worker code
           m_w.close; w_r.close; r = m_r; w = w_w
-          loop { w.write "ready"; cmd_len = r.read(2); cmd=r.read(Integer(cmd_len)); send(cmd.to_sym) }
+          loop { w.write "ready"; cmd_len = r.read(2); cmd=r.read(cmd_len.to_i); send(cmd.to_sym) }
         end
       end
     end
