@@ -29,7 +29,7 @@ module Utils
       require 'rubygems' # for MRI 1.8.*
       require 'pg'
       def sync_io_work
-        ::PGconn.new({:dbname => 'rsv2_mls', :user => 'realscout', :password => '123foo', :host => '127.0.0.1'}).exec("SELECT pg_sleep(3)")
+        ::PGconn.new({:dbname => 'dev', :user => 'me', :password => 'cccccc', :host => '127.0.0.1'}).exec("SELECT pg_sleep(3)")
       end
       alias :blocking_db_call :sync_io_work
 
